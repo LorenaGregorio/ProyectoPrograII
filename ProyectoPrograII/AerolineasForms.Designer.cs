@@ -56,7 +56,8 @@
             "Iberia",
             "Aeromexico",
             "Tag Airlines",
-            "Volaris"});
+            "Volaris",
+            "Otra"});
             this.combnombreaerolinea.Location = new System.Drawing.Point(203, 39);
             this.combnombreaerolinea.Name = "combnombreaerolinea";
             this.combnombreaerolinea.Size = new System.Drawing.Size(121, 21);

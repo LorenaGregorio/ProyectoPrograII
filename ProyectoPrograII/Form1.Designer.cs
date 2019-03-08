@@ -78,13 +78,15 @@
             // 
             this.pistasDeAterrizajeToolStripMenuItem.Name = "pistasDeAterrizajeToolStripMenuItem";
             this.pistasDeAterrizajeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pistasDeAterrizajeToolStripMenuItem.Text = "Pistas de Aterrizaje";
+            this.pistasDeAterrizajeToolStripMenuItem.Text = "Plan de Vuelo";
+            this.pistasDeAterrizajeToolStripMenuItem.Click += new System.EventHandler(this.pistasDeAterrizajeToolStripMenuItem_Click);
             // 
             // prioridadToolStripMenuItem
             // 
             this.prioridadToolStripMenuItem.Name = "prioridadToolStripMenuItem";
             this.prioridadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.prioridadToolStripMenuItem.Text = "Prioridad ";
+            this.prioridadToolStripMenuItem.Click += new System.EventHandler(this.prioridadToolStripMenuItem_Click);
             // 
             // Form1
             // 

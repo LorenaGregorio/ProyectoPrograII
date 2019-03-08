@@ -41,5 +41,21 @@ namespace ProyectoPrograII
                 avio.ShowDialog();
             }
         }
+
+        private void pistasDeAterrizajeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (PlandeVueloForms plan = new PlandeVueloForms(this))
+            {
+                plan.ShowDialog();
+            }
+        }
+
+        private void prioridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (PrioridaddeVueloForms prioridad = new PrioridaddeVueloForms(this))
+            {
+                prioridad.ShowDialog();
+            }
+        }
     }
 }

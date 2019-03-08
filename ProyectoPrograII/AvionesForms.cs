@@ -40,7 +40,7 @@ namespace ProyectoPrograII
                 dateTimellegada.Text,
                 txtescala.Text,
                 Convert.ToInt16 (txtpasajetripu.Text)
-                );
+            );
 
             listaaviones.Add(aviones1);
 
