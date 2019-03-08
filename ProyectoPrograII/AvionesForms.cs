@@ -38,7 +38,7 @@ namespace ProyectoPrograII
                 txtlugardestino.Text,
                 dateTimesalida.Text,
                 dateTimellegada.Text,
-                txtescala.Text,
+                combescala.Text,
                 Convert.ToInt16 (txtpasajetripu.Text)
             );
 
@@ -56,7 +56,6 @@ namespace ProyectoPrograII
             txtcodavion.Clear();
             txtlugarsalida.Clear();
             txtlugardestino.Clear();
-            txtescala.Clear();
             txtpasajetripu.Clear();
 
         }

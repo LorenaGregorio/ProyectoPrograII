@@ -44,11 +44,11 @@
             this.combclaseavion = new System.Windows.Forms.ComboBox();
             this.txtlugarsalida = new System.Windows.Forms.TextBox();
             this.txtlugardestino = new System.Windows.Forms.TextBox();
-            this.txtescala = new System.Windows.Forms.TextBox();
             this.txtpasajetripu = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimellegada = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.combescala = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,13 +210,6 @@
             this.txtlugardestino.Size = new System.Drawing.Size(179, 20);
             this.txtlugardestino.TabIndex = 14;
             // 
-            // txtescala
-            // 
-            this.txtescala.Location = new System.Drawing.Point(222, 405);
-            this.txtescala.Name = "txtescala";
-            this.txtescala.Size = new System.Drawing.Size(121, 20);
-            this.txtescala.TabIndex = 15;
-            // 
             // txtpasajetripu
             // 
             this.txtpasajetripu.Location = new System.Drawing.Point(222, 441);
@@ -250,6 +243,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(471, 266);
             this.dataGridView1.TabIndex = 19;
             // 
+            // combescala
+            // 
+            this.combescala.FormattingEnabled = true;
+            this.combescala.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.combescala.Location = new System.Drawing.Point(195, 404);
+            this.combescala.Name = "combescala";
+            this.combescala.Size = new System.Drawing.Size(121, 21);
+            this.combescala.TabIndex = 20;
+            // 
             // AvionesForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,11 +261,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 502);
+            this.Controls.Add(this.combescala);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimellegada);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtpasajetripu);
-            this.Controls.Add(this.txtescala);
             this.Controls.Add(this.txtlugardestino);
             this.Controls.Add(this.txtlugarsalida);
             this.Controls.Add(this.combclaseavion);
@@ -302,10 +306,10 @@
         private System.Windows.Forms.ComboBox combclaseavion;
         private System.Windows.Forms.TextBox txtlugarsalida;
         private System.Windows.Forms.TextBox txtlugardestino;
-        private System.Windows.Forms.TextBox txtescala;
         private System.Windows.Forms.TextBox txtpasajetripu;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimellegada;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox combescala;
     }
 }

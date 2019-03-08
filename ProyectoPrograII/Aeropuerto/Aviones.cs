@@ -32,7 +32,7 @@ namespace ProyectoPrograII.Aeropuerto
         //Constructor
 
         public Aviones(string CodigodeAvion, string TipodeAvion, string ClasedeAvion, string LugarSalidaAvion, string LugarDestinoAvion,
-        string FechayHoraSalidaAvion, string FechayHoraLLegadaAvion, string Escala, int NumerodePasajerosyTripulacion)
+        string FechayHoraSalidaAvion, string FechayHoraLlegadaAvion, string Escala, int NumerodePasajerosyTripulacion)
         {
             this.CodigodeAvion = CodigodeAvion;
             this.TipodeAvion = TipodeAvion;
