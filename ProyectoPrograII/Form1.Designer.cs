@@ -72,6 +72,7 @@
             this.avionesToolStripMenuItem.Name = "avionesToolStripMenuItem";
             this.avionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.avionesToolStripMenuItem.Text = "Aviones";
+            this.avionesToolStripMenuItem.Click += new System.EventHandler(this.avionesToolStripMenuItem_Click);
             // 
             // pistasDeAterrizajeToolStripMenuItem
             // 

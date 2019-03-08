@@ -53,6 +53,13 @@
       <DependentUpon>AerolineasForms.cs</DependentUpon>
     </Compile>
     <Compile Include="Aeropuerto\Aerolinea.cs" />
+    <Compile Include="Aeropuerto\Aviones.cs" />
+    <Compile Include="AvionesForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvionesForms.Designer.cs">
+      <DependentUpon>AvionesForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aeropuerto\Aerolinea.resx">
       <DependentUpon>Aerolinea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AvionesForms.resx">
+      <DependentUpon>AvionesForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

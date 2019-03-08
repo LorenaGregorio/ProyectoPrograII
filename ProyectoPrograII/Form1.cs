@@ -33,5 +33,13 @@ namespace ProyectoPrograII
                    
 
         }
+
+        private void avionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (AvionesForms avio = new AvionesForms(this))
+            {
+                avio.ShowDialog();
+            }
+        }
     }
 }
