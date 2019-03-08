@@ -143,9 +143,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(12, 409);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 16);
+            this.label8.Size = new System.Drawing.Size(75, 16);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Escala";
+            this.label8.Text = "Hace Escala?";
             // 
             // label9
             // 
