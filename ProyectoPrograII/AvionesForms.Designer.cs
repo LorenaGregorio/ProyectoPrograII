@@ -247,8 +247,8 @@
             // 
             this.combescala.FormattingEnabled = true;
             this.combescala.Items.AddRange(new object[] {
-            "SI",
-            "NO"});
+            "True",
+            "False"});
             this.combescala.Location = new System.Drawing.Point(195, 404);
             this.combescala.Name = "combescala";
             this.combescala.Size = new System.Drawing.Size(121, 21);

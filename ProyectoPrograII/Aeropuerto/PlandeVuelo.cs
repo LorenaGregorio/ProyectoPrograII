@@ -13,18 +13,18 @@ namespace ProyectoPrograII.Aeropuerto
 
         private string NumerodePista;
 
-        private string FechadeEntrada;
+        private string Fecha;
 
-        private string FechadeSalida;
+       
         
         //constructor
 
-        public PlandeVuelo(string TipodeAccion, string NumerodePista, string FechadeEntrada, string FechadeSalida)
+        public PlandeVuelo(string TipodeAccion, string NumerodePista, string Fecha)
         {
             this.TipodeAccion = TipodeAccion;
             this.NumerodePista = NumerodePista;
-            this.FechadeEntrada = FechadeEntrada;
-            this.FechadeSalida = FechadeSalida;
+            this.Fecha = Fecha;
+        
         }
 
         public string tipodeaccion
@@ -51,34 +51,23 @@ namespace ProyectoPrograII.Aeropuerto
             }
 
         }
-        public string fechadesalida
+       
+        public string fecha
         {
             get
             {
-                return FechadeSalida;
+                return Fecha;
             }
             set
             {
-                FechadeSalida = value;
+                Fecha = value;
             }
         }
 
-        public string fechadeentrada
-        {
-            get
-            {
-                return FechadeEntrada;
-            }
-            set
-            {
-                FechadeEntrada = value;
-            }
-        }
 
-        
-   
-      
-        
+
+
+
 
     }
 }

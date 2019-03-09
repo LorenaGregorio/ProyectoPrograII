@@ -38,7 +38,7 @@ namespace ProyectoPrograII
                 txtlugardestino.Text,
                 dateTimesalida.Text,
                 dateTimellegada.Text,
-                combescala.Text,
+                Convert.ToBoolean( combescala.Text),
                 Convert.ToInt16 (txtpasajetripu.Text)
             );
 
@@ -60,6 +60,10 @@ namespace ProyectoPrograII
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

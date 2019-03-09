@@ -33,7 +33,7 @@ namespace ProyectoPrograII
             (
                 combaccion.Text,
                 combpista.Text,
-                dateTimedespegue.Text,
+          
                 dateTimeaterrizaje.Text
                                 
 
@@ -52,6 +52,44 @@ namespace ProyectoPrograII
         public void borrar()
         {
             
+        }
+
+        private void PlandeVueloForms_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void combaccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combaccion.SelectedItem.Equals("Aterrizar"))
+            {
+
+                label4.Visible = true;
+                dateTimeaterrizaje.Visible = true;
+
+                label3.Visible = false;
+             
+
+            }
+            else if (combaccion.SelectedItem.Equals("Despegar"))
+            {
+                label3.Visible = true;
+                dateTimeaterrizaje.Visible = true;
+
+                label4.Visible = false;
+         
+
+            }
+        }
+
+        private void dateTimedespegue_ValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dateTimeaterrizaje_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimeaterrizaje.Value.Equals("0/0/0000 00:00");
         }
     }
 }

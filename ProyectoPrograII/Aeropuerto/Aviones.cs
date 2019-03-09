@@ -23,7 +23,7 @@ namespace ProyectoPrograII.Aeropuerto
 
         private string FechayHoraLlegadaAvion;
 
-        private string Escala;
+        private bool Escala;
 
         private int NumerodePasajerosyTripulacion;
 
@@ -32,7 +32,7 @@ namespace ProyectoPrograII.Aeropuerto
         //Constructor
 
         public Aviones(string CodigodeAvion, string TipodeAvion, string ClasedeAvion, string LugarSalidaAvion, string LugarDestinoAvion,
-        string FechayHoraSalidaAvion, string FechayHoraLlegadaAvion, string Escala, int NumerodePasajerosyTripulacion)
+        string FechayHoraSalidaAvion, string FechayHoraLlegadaAvion, bool Escala, int NumerodePasajerosyTripulacion)
         {
             this.CodigodeAvion = CodigodeAvion;
             this.TipodeAvion = TipodeAvion;
@@ -131,7 +131,7 @@ namespace ProyectoPrograII.Aeropuerto
             }
         }
 
-        public string escala
+        public bool escala
         {
             get
             {
