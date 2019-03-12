@@ -13,24 +13,30 @@ namespace ProyectoPrograII
 {
     public partial class PrioridaddeVueloForms : Form
     {
-        private Form1 form1;
+        private AvionesForms avionesForms;
 
-        public PrioridaddeVueloForms(Form1 form)
+        public PrioridaddeVueloForms(AvionesForms avionesForms)
         {
             InitializeComponent();
-            this.form1 = form1;
+            this.avionesForms = avionesForms;
         }
+
 
         List<PrioridaddeVuelo> listaprioridaddeVuelos = new List<PrioridaddeVuelo>();
 
 
         private void button1_Click(object sender, EventArgs e)
+                  
         {
             //se creo objeto de la clase prioridad de vuelo
             PrioridaddeVuelo prioridaddeVuelo1 = new PrioridaddeVuelo
             (
                 combtipoemer.Text,
-                txtubicacion.Text
+                Convert.ToDouble (txtlatitud.Text),
+                Convert.ToDouble (txtlongitud.Text),
+                Convert.ToDouble(label7.Text),
+                Convert.ToDouble(label9.Text)
+                
             );
 
             listaprioridaddeVuelos.Add(prioridaddeVuelo1);
@@ -41,14 +47,30 @@ namespace ProyectoPrograII
 
             borrar();
 
+            
+
         }
+
+       
 
         public void borrar()
         {
-            txtubicacion.Clear();
+            txtlatitud.Clear();
+            txtlongitud.Clear();
+           
         }
+
+
         
 
+        private void label3_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void PrioridaddeVueloForms_Load(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }

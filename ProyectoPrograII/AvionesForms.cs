@@ -64,6 +64,36 @@ namespace ProyectoPrograII
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combemerg.SelectedItem.Equals("SI"))
+            {
+                using (PrioridaddeVueloForms prioridad = new PrioridaddeVueloForms(this))
+                {
+                    
+                    prioridad.ShowDialog();
+                }
+
+
+
+            }
+        }
+
+        private void combtipoavion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combclaseavion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+       
+        }
+
+        private void AvionesForms_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

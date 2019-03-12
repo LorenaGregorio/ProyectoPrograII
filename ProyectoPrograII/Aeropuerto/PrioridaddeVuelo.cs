@@ -11,14 +11,24 @@ namespace ProyectoPrograII.Aeropuerto
         //encapsulamiento
         private string TipodeEmergencia;
 
-        private string UbicaciondeVuelo;
+        private double Latitud;
+
+        private double Longitud;
+
+        private double Distancia;
+
+        private double TiempoLlegada;
 
         //constructor
 
-        public PrioridaddeVuelo(string TipodeEmergencia, string UbicaciondeVuelo)
+        public PrioridaddeVuelo(string TipodeEmergencia, double Latitud, double Longitud, double Distancia, double TiempoLlegada)
         {
             this.TipodeEmergencia = TipodeEmergencia;
-            this.UbicaciondeVuelo = UbicaciondeVuelo;
+            this.Latitud = Latitud;
+            this.Longitud = Longitud;
+            this.Distancia = Distancia;
+            this.TiempoLlegada = TiempoLlegada;
+            
         }
 
         public string tipodeemergencia
@@ -34,18 +44,55 @@ namespace ProyectoPrograII.Aeropuerto
 
         }
 
-        public string ubicaciondevuelo
+        public double latitud
         {
             get
             {
-                return UbicaciondeVuelo;
+                return Latitud;
 
             }
             set
             {
-                UbicaciondeVuelo = value;
+                Latitud = value;
             }
         }
+
+        public double longitud
+        {
+            get
+            {
+                return Longitud;
+            }
+            set
+            {
+                Longitud = value;
+            }
+        }
+        public double distancia
+        {
+            get
+            {
+                return Distancia;
+            }
+            set
+            {
+                Distancia = value;
+            }
+        }
+
+        public double tiempollegada
+        {
+            get
+            {
+                return TiempoLlegada;
+            }
+            set
+            {
+                TiempoLlegada = value;
+            }
+        }
+
+       
 
 
     }

@@ -49,6 +49,8 @@
             this.dateTimellegada = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.combescala = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.combemerg = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +103,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 253);
+            this.label5.Location = new System.Drawing.Point(7, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 16);
             this.label5.TabIndex = 4;
@@ -109,7 +111,7 @@
             // 
             // dateTimesalida
             // 
-            this.dateTimesalida.Location = new System.Drawing.Point(190, 301);
+            this.dateTimesalida.Location = new System.Drawing.Point(137, 275);
             this.dateTimesalida.Name = "dateTimesalida";
             this.dateTimesalida.Size = new System.Drawing.Size(271, 20);
             this.dateTimesalida.TabIndex = 5;
@@ -120,28 +122,28 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 308);
+            this.label6.Location = new System.Drawing.Point(7, 280);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 16);
+            this.label6.Size = new System.Drawing.Size(108, 16);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Fecha y Hora Salida Avion";
+            this.label6.Text = "Fecha Salida Avion";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 362);
+            this.label7.Location = new System.Drawing.Point(7, 318);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 16);
+            this.label7.Size = new System.Drawing.Size(117, 16);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Fecha y Hora LLegada Avion";
+            this.label7.Text = "Fecha Llegada Avion";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 409);
+            this.label8.Location = new System.Drawing.Point(12, 399);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 16);
             this.label8.TabIndex = 8;
@@ -151,7 +153,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 448);
+            this.label9.Location = new System.Drawing.Point(7, 354);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(195, 16);
             this.label9.TabIndex = 9;
@@ -159,7 +161,7 @@
             // 
             // txtcodavion
             // 
-            this.txtcodavion.Location = new System.Drawing.Point(121, 30);
+            this.txtcodavion.Location = new System.Drawing.Point(137, 29);
             this.txtcodavion.Name = "txtcodavion";
             this.txtcodavion.Size = new System.Drawing.Size(179, 20);
             this.txtcodavion.TabIndex = 10;
@@ -173,11 +175,12 @@
             "Militar",
             "Negocios",
             "Otro"});
-            this.combtipoavion.Location = new System.Drawing.Point(121, 83);
+            this.combtipoavion.Location = new System.Drawing.Point(137, 81);
             this.combtipoavion.Name = "combtipoavion";
             this.combtipoavion.Size = new System.Drawing.Size(179, 21);
             this.combtipoavion.TabIndex = 11;
             this.combtipoavion.Text = "Elija Opcion";
+            this.combtipoavion.SelectedIndexChanged += new System.EventHandler(this.combtipoavion_SelectedIndexChanged);
             // 
             // combclaseavion
             // 
@@ -190,29 +193,30 @@
             "Saab Bimotor",
             "Piper Seneca Bimotor",
             "King Air 300"});
-            this.combclaseavion.Location = new System.Drawing.Point(121, 128);
+            this.combclaseavion.Location = new System.Drawing.Point(137, 131);
             this.combclaseavion.Name = "combclaseavion";
             this.combclaseavion.Size = new System.Drawing.Size(179, 21);
             this.combclaseavion.TabIndex = 12;
             this.combclaseavion.Text = "Elija Opcion";
+            this.combclaseavion.SelectedIndexChanged += new System.EventHandler(this.combclaseavion_SelectedIndexChanged);
             // 
             // txtlugarsalida
             // 
-            this.txtlugarsalida.Location = new System.Drawing.Point(121, 184);
+            this.txtlugarsalida.Location = new System.Drawing.Point(137, 184);
             this.txtlugarsalida.Name = "txtlugarsalida";
             this.txtlugarsalida.Size = new System.Drawing.Size(179, 20);
             this.txtlugarsalida.TabIndex = 13;
             // 
             // txtlugardestino
             // 
-            this.txtlugardestino.Location = new System.Drawing.Point(121, 251);
+            this.txtlugardestino.Location = new System.Drawing.Point(137, 231);
             this.txtlugardestino.Name = "txtlugardestino";
             this.txtlugardestino.Size = new System.Drawing.Size(179, 20);
             this.txtlugardestino.TabIndex = 14;
             // 
             // txtpasajetripu
             // 
-            this.txtpasajetripu.Location = new System.Drawing.Point(222, 441);
+            this.txtpasajetripu.Location = new System.Drawing.Point(208, 350);
             this.txtpasajetripu.Name = "txtpasajetripu";
             this.txtpasajetripu.Size = new System.Drawing.Size(122, 20);
             this.txtpasajetripu.TabIndex = 16;
@@ -220,7 +224,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(554, 332);
+            this.button1.Location = new System.Drawing.Point(566, 289);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 102);
             this.button1.TabIndex = 17;
@@ -230,7 +234,7 @@
             // 
             // dateTimellegada
             // 
-            this.dateTimellegada.Location = new System.Drawing.Point(190, 355);
+            this.dateTimellegada.Location = new System.Drawing.Point(137, 314);
             this.dateTimellegada.Name = "dateTimellegada";
             this.dateTimellegada.Size = new System.Drawing.Size(271, 20);
             this.dateTimellegada.TabIndex = 18;
@@ -238,7 +242,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(306, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(370, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(471, 266);
             this.dataGridView1.TabIndex = 19;
@@ -249,10 +253,36 @@
             this.combescala.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.combescala.Location = new System.Drawing.Point(195, 404);
+            this.combescala.Location = new System.Drawing.Point(105, 399);
             this.combescala.Name = "combescala";
             this.combescala.Size = new System.Drawing.Size(121, 21);
             this.combescala.TabIndex = 20;
+            this.combescala.Text = "Elija Opcion";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Red;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(389, 419);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(247, 26);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "AVION EN EMERGENCIA";
+            // 
+            // combemerg
+            // 
+            this.combemerg.FormattingEnabled = true;
+            this.combemerg.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.combemerg.Location = new System.Drawing.Point(642, 419);
+            this.combemerg.Name = "combemerg";
+            this.combemerg.Size = new System.Drawing.Size(126, 21);
+            this.combemerg.TabIndex = 22;
+            this.combemerg.Text = "Elija Opcion";
+            this.combemerg.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // AvionesForms
             // 
@@ -260,7 +290,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(821, 502);
+            this.ClientSize = new System.Drawing.Size(870, 502);
+            this.Controls.Add(this.combemerg);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.combescala);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimellegada);
@@ -283,6 +315,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AvionesForms";
             this.Text = "AvionesForms";
+            this.Load += new System.EventHandler(this.AvionesForms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -311,5 +344,7 @@
         private System.Windows.Forms.DateTimePicker dateTimellegada;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox combescala;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox combemerg;
     }
 }

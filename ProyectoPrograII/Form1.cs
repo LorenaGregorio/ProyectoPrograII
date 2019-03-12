@@ -52,10 +52,12 @@ namespace ProyectoPrograII
 
         private void prioridadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (PrioridaddeVueloForms prioridad = new PrioridaddeVueloForms(this))
-            {
-                prioridad.ShowDialog();
-            }
+          
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
