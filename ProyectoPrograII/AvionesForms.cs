@@ -40,6 +40,8 @@ namespace ProyectoPrograII
                 dateTimellegada.Text,
                 Convert.ToBoolean( combescala.Text),
                 Convert.ToInt16 (txtpasajetripu.Text)
+                
+
             );
 
             listaaviones.Add(aviones1);
@@ -69,13 +71,36 @@ namespace ProyectoPrograII
         {
             if (combemerg.SelectedItem.Equals("SI"))
             {
-                using (PrioridaddeVueloForms prioridad = new PrioridaddeVueloForms(this))
-                {
-                    
-                    prioridad.ShowDialog();
-                }
+                label11.Visible = true;
+                label12.Visible = true;
+                label13.Visible = true;
+                label14.Visible = true;
+                label15.Visible = true;
+                label16.Visible = true;
+                label17.Visible = true;
+                combtipoemer.Visible = true;
+                txtlatitud.Visible = true;
+                txtlongitud.Visible = true;
+                button2.Visible = true;
+                label20.Visible = true;
+                label21.Visible = true;
 
-
+            }
+            if (combemerg.SelectedItem.Equals("NO"))
+            {
+                label11.Visible = false;
+                label12.Visible = false;
+                label13.Visible = false;
+                label14.Visible = false;
+                label15.Visible = false;
+                label16.Visible = false;
+                label17.Visible = false;
+                combtipoemer.Visible = false;
+                txtlatitud.Visible = false;
+                txtlongitud.Visible = false;
+                button2.Visible = false;
+                label20.Visible = false;
+                label21.Visible = false;
 
             }
         }
@@ -92,6 +117,88 @@ namespace ProyectoPrograII
 
         private void AvionesForms_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double lon,lat,dis,vel,ti;
+
+            lon = Convert.ToDouble(txtlongitud.Text);
+            lat = Convert.ToDouble(txtlatitud.Text);
+
+
+            dis = Math.Sqrt((Math.Pow(lon, 2) + Math.Pow(lat, 2)));
+
+            label13.Text = ( Math.Round(dis,2)).ToString();
+            
+
+            if (combclaseavion.SelectedItem.Equals("Boeing"))
+            {
+                vel = 893;
+                ti = dis / vel;
+
+                label11.Text= (Math.Round(ti,2)).ToString();
+            }
+
+            if (combclaseavion.SelectedItem.Equals("Airbus"))
+            {
+                vel = 871;
+                ti = dis / vel;
+
+                label11.Text = (Math.Round(ti, 2)).ToString();
+            }
+
+            if (combclaseavion.SelectedItem.Equals("Bombardier"))
+            {
+                vel = 876;
+                ti = dis / vel;
+
+                label11.Text = (Math.Round(ti, 2)).ToString();
+            }
+
+            if (combclaseavion.SelectedItem.Equals("Embraer"))
+            {
+                vel = 875;
+                ti = dis / vel;
+
+                label11.Text = (Math.Round(ti, 2)).ToString();
+            }
+
+            if (combclaseavion.SelectedItem.Equals("Saab Bimotor"))
+            {
+                vel = 476;
+                ti = dis / vel;
+
+                label11.Text = (Math.Round(ti, 2)).ToString();
+            }
+
+            if (combclaseavion.SelectedItem.Equals("Piper Seneca Bimotor"))
+            {
+                vel = 378;
+                ti = dis / vel;
+
+                label11.Text = (Math.Round(ti, 2)).ToString();
+            }
+
+            if (combclaseavion.SelectedItem.Equals("King Air 300"))
+            {
+                vel = 580;
+                ti = dis / vel;
+
+                label11.Text = (Math.Round(ti, 2)).ToString();
+            }
+
+           
+
+
+
+
 
         }
     }
