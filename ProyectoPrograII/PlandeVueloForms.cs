@@ -11,8 +11,7 @@ using ProyectoPrograII.Aeropuerto;
 
 namespace ProyectoPrograII
 {
-    public partial class PlandeVueloForms : Form
-    {
+    public partial class PlandeVueloForms : Form     {
         private Form1 form1;
 
         public PlandeVueloForms(Form1 form1)
@@ -24,7 +23,7 @@ namespace ProyectoPrograII
         //se crea la lista de plan de vuelo
 
         List<PlandeVuelo> listaplandeVuelos = new List<PlandeVuelo>();
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             //se crea el objeto para la clase plan de vuelo
@@ -91,5 +90,11 @@ namespace ProyectoPrograII
         {
             dateTimeaterrizaje.Value.Equals("0/0/0000 00:00");
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

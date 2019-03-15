@@ -307,9 +307,9 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(670, 181);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(17, 22);
+            this.label11.Size = new System.Drawing.Size(20, 22);
             this.label11.TabIndex = 32;
-            this.label11.Text = "-";
+            this.label11.Text = "0";
             this.label11.Visible = false;
             // 
             // label12
@@ -332,9 +332,9 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(547, 137);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 22);
+            this.label13.Size = new System.Drawing.Size(20, 22);
             this.label13.TabIndex = 30;
-            this.label13.Text = "-";
+            this.label13.Text = "0";
             this.label13.Visible = false;
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
@@ -356,6 +356,7 @@
             this.txtlongitud.Name = "txtlongitud";
             this.txtlongitud.Size = new System.Drawing.Size(100, 20);
             this.txtlongitud.TabIndex = 28;
+            this.txtlongitud.Text = "0";
             this.txtlongitud.Visible = false;
             // 
             // label15
@@ -376,6 +377,7 @@
             this.txtlatitud.Name = "txtlatitud";
             this.txtlatitud.Size = new System.Drawing.Size(100, 20);
             this.txtlatitud.TabIndex = 26;
+            this.txtlatitud.Text = "0";
             this.txtlatitud.Visible = false;
             // 
             // label16
@@ -422,11 +424,11 @@
             // 
             this.button2.BackColor = System.Drawing.Color.LightGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(749, 84);
+            this.button2.Location = new System.Drawing.Point(765, 67);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 77);
+            this.button2.Size = new System.Drawing.Size(127, 94);
             this.button2.TabIndex = 33;
-            this.button2.Text = "Calcular Tiempo de Llegada";
+            this.button2.Text = "Calcular Tiempo Estimado Llegada";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -456,7 +458,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Red;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(622, 141);
+            this.label20.Location = new System.Drawing.Point(629, 138);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(47, 18);
             this.label20.TabIndex = 36;

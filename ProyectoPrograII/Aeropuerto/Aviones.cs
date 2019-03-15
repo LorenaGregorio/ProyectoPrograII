@@ -27,12 +27,25 @@ namespace ProyectoPrograII.Aeropuerto
 
         private int NumerodePasajerosyTripulacion;
 
+        private string TipodeEmergencia;
+
+        private double Latitud = 0;
+
+        private double Longitud = 0;
+
+        private double Distancia = 0;
+
+        private double TiempoEstimadoLlegada = 0;
+
         
+
+
 
         //Constructor
 
         public Aviones(string CodigodeAvion, string TipodeAvion, string ClasedeAvion, string LugarSalidaAvion, string LugarDestinoAvion,
-        string FechayHoraSalidaAvion, string FechayHoraLlegadaAvion, bool Escala, int NumerodePasajerosyTripulacion)
+        string FechayHoraSalidaAvion, string FechayHoraLlegadaAvion, bool Escala, int NumerodePasajerosyTripulacion, string TipodeEmergencia, 
+        double Latitud, double Longitud, double Distancia, double TiempoEstimadoLlegada)
         {
             this.CodigodeAvion = CodigodeAvion;
             this.TipodeAvion = TipodeAvion;
@@ -43,6 +56,12 @@ namespace ProyectoPrograII.Aeropuerto
             this.FechayHoraLlegadaAvion = FechayHoraLlegadaAvion;
             this.Escala = Escala;
             this.NumerodePasajerosyTripulacion = NumerodePasajerosyTripulacion;
+            this.TipodeEmergencia = TipodeEmergencia;
+            this.Latitud = Latitud;
+            this.Longitud = Longitud;
+            this.Distancia = Distancia;
+            this.TiempoEstimadoLlegada = TiempoEstimadoLlegada;
+
         }
 
         public string codigodeavion
@@ -153,6 +172,66 @@ namespace ProyectoPrograII.Aeropuerto
             set
             {
                 NumerodePasajerosyTripulacion = value;
+            }
+        }
+
+        public string tipodeemergencia
+        {
+            get
+            {
+                return TipodeEmergencia;
+            }
+            set
+            {
+                TipodeEmergencia = value;
+            }
+        }
+
+        public double latitud
+        {
+            get
+            {
+                return Latitud;
+
+            }
+            set
+            {
+                Latitud = value;
+            }
+        }
+
+        public double longitud
+        {
+            get
+            {
+                return Longitud;
+            }
+            set
+            {
+                Longitud = value;
+            }
+        }
+        public double distancia
+        {
+            get
+            {
+                return Distancia;
+            }
+            set
+            {
+                Distancia = value;
+            }
+        }
+
+        public double tiempoestimadollegada
+        {
+            get
+            {
+                return TiempoEstimadoLlegada;
+            }
+            set
+            {
+                TiempoEstimadoLlegada = value;
             }
         }
 
