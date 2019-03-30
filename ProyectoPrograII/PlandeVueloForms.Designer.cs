@@ -64,7 +64,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.combescala = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -97,29 +102,29 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 16);
+            this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Numero de Pista";
+            this.label2.Text = "Pista/Categoria";
             // 
             // combpista
             // 
             this.combpista.FormattingEnabled = true;
             this.combpista.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "PISTA DE EMERGENCIA"});
+            "1 AVIONES DE CARGA",
+            "2 AVIONES DE CARGA",
+            "3 AVIONETAS VIP",
+            "4 AVIONETAS VIP",
+            "5 AVIONES DE PASAJEROS (200 PASAJEROS)",
+            "6 AVIONES DE PASAJEROS (200 PASAJEROS)",
+            "7 AVIONES DE PASAJEROS (200 PASAJEROS)",
+            "8 AVIONES JUMBO (2000 PASAJEROS)",
+            "9 AVIONES JUMBO (2000 PASAJEROS)",
+            "10 PISTA DE EMERGENCIA"});
             this.combpista.Location = new System.Drawing.Point(153, 99);
             this.combpista.Name = "combpista";
-            this.combpista.Size = new System.Drawing.Size(121, 21);
+            this.combpista.Size = new System.Drawing.Size(242, 21);
             this.combpista.TabIndex = 3;
+            this.combpista.SelectedIndexChanged += new System.EventHandler(this.combpista_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -472,6 +477,50 @@
             this.label9.TabIndex = 55;
             this.label9.Text = "Hace Escala?";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Gray;
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(525, 242);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(300, 198);
+            this.groupBox1.TabIndex = 59;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "DATOS PISTA";
+            this.groupBox1.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(81, 115);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 66);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "CALCULAR TIEMPO DE DESPEGUE";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(109, 62);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(16, 16);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "0";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(175, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(65, 16);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "HORAS.";
+            // 
             // PlandeVueloForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,6 +528,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(859, 466);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.combemerg);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.combescala);
@@ -518,6 +568,8 @@
             this.Text = "PlandeVueloForms";
             this.Load += new System.EventHandler(this.PlandeVueloForms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,5 +612,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox combescala;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label23;
     }
 }

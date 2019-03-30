@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Aeropuerto\Aerolinea.cs" />
     <Compile Include="Aeropuerto\Aviones.cs" />
+    <Compile Include="Aeropuerto\Pistas.cs" />
     <Compile Include="Aeropuerto\PlandeVuelo.cs" />
     <Compile Include="AvionesForms.cs">
       <SubType>Form</SubType>

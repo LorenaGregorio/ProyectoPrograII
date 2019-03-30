@@ -59,8 +59,8 @@ namespace ProyectoPrograII
             borrar();
 
             combpista.Items.Remove(combpista.SelectedItem);
-           
-                    
+
+
         }
         public void borrar()
         {
@@ -81,6 +81,8 @@ namespace ProyectoPrograII
                 dateTimeaterrizaje.Visible = true;
 
                 label3.Visible = false;
+
+                groupBox1.Visible = false;
              
 
             }
@@ -90,7 +92,8 @@ namespace ProyectoPrograII
                 dateTimeaterrizaje.Visible = true;
 
                 label4.Visible = false;
-         
+
+                groupBox1.Visible = true;
 
             }
         }
@@ -233,6 +236,84 @@ namespace ProyectoPrograII
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void combpista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            {
+                double larpis, vel, ti;
+
+                //lon = Convert.ToDouble(txtlongitud.Text);
+                //lat = Convert.ToDouble(txtlatitud.Text);
+
+
+                //ti = Math.Sqrt((Math.Pow(larpis, 2) + Math.Pow(vel, 2)));
+
+                //label22.Text = (Math.Round(dis, 2)).ToString();
+
+
+                if (combclaseavion.SelectedItem.Equals("Boeing"))
+                {
+                    vel = 893;
+                    ti = 200 / vel;
+
+                    label22.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Airbus"))
+                {
+                    vel = 871;
+                    ti = 200 / vel;
+
+                    label22.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Bombardier"))
+                {
+                    vel = 876;
+                    ti = 200 / vel;
+
+                    label22.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Embraer"))
+                {
+                    vel = 875;
+                    ti = 200 / vel;
+
+                    label22.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Saab Bimotor"))
+                {
+                    vel = 476;
+                    ti = 200 / vel;
+
+                    label22.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Piper Seneca Bimotor"))
+                {
+                    vel = 378;
+                    ti = 200 / vel;
+
+                    label22.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("King Air 300"))
+                {
+                    vel = 580;
+                    ti = 200 / vel;
+
+                    label22.Text = (Math.Round(ti, 2)).ToString();
+                }
+            }
 
         }
     }
