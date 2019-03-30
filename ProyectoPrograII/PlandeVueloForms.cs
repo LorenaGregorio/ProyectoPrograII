@@ -11,7 +11,8 @@ using ProyectoPrograII.Aeropuerto;
 
 namespace ProyectoPrograII
 {
-    public partial class PlandeVueloForms : Form     {
+    public partial class PlandeVueloForms : Form
+    {
         private Form1 form1;
 
         public PlandeVueloForms(Form1 form1)
@@ -30,11 +31,22 @@ namespace ProyectoPrograII
 
             PlandeVuelo plandevue1 = new PlandeVuelo
             (
+                comboBox1.Text,
+                combclaseavion.Text,
                 combaccion.Text,
                 combpista.Text,
-          
-                dateTimeaterrizaje.Text
-                                
+                dateTimeaterrizaje.Text,
+                Convert.ToBoolean(combescala.Text),
+                textBox1.Text,
+                combescala.Text,
+                combtipoemer.Text,
+                Convert.ToInt32( txtlatitud.Text),
+                Convert.ToInt32( txtlongitud.Text),
+                Convert.ToDouble(label13.Text),
+                Convert.ToDouble(label11.Text)
+               
+
+
 
             );
 
@@ -45,6 +57,8 @@ namespace ProyectoPrograII
             dataGridView1.DataSource = listaplandeVuelos;
 
             borrar();
+
+            combpista.Items.Remove(combpista.SelectedItem);
            
                     
         }
@@ -55,7 +69,7 @@ namespace ProyectoPrograII
 
         private void PlandeVueloForms_Load(object sender, EventArgs e)
         {
-          
+         
         }
 
         private void combaccion_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,6 +106,132 @@ namespace ProyectoPrograII
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //comboBox1.AddItem AvionesForms.txtcodavion.Text//
+            //FormDelCombo.Combo2.AddItem txtnombre.Text
+
+            //comboBox1.Text = AvionesForms.;
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            {
+                double lon, lat, dis, vel, ti;
+
+                lon = Convert.ToDouble(txtlongitud.Text);
+                lat = Convert.ToDouble(txtlatitud.Text);
+
+
+                dis = Math.Sqrt((Math.Pow(lon, 2) + Math.Pow(lat, 2)));
+
+                label13.Text = (Math.Round(dis, 2)).ToString();
+
+
+                if (combclaseavion.SelectedItem.Equals("Boeing"))
+                {
+                    vel = 893;
+                    ti = dis / vel;
+
+                    label11.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Airbus"))
+                {
+                    vel = 871;
+                    ti = dis / vel;
+
+                    label11.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Bombardier"))
+                {
+                    vel = 876;
+                    ti = dis / vel;
+
+                    label11.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Embraer"))
+                {
+                    vel = 875;
+                    ti = dis / vel;
+
+                    label11.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Saab Bimotor"))
+                {
+                    vel = 476;
+                    ti = dis / vel;
+
+                    label11.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("Piper Seneca Bimotor"))
+                {
+                    vel = 378;
+                    ti = dis / vel;
+
+                    label11.Text = (Math.Round(ti, 2)).ToString();
+                }
+
+                if (combclaseavion.SelectedItem.Equals("King Air 300"))
+                {
+                    vel = 580;
+                    ti = dis / vel;
+
+                    label11.Text = (Math.Round(ti, 2)).ToString();
+                }
+            }
+        }
+
+        private void combemerg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combemerg.SelectedItem.Equals("SI"))
+            {
+                combpista.Text = "PISTA EMERGENCIA";
+                label11.Visible = true;
+                label12.Visible = true;
+                label13.Visible = true;
+                label14.Visible = true;
+                label15.Visible = true;
+                label16.Visible = true;
+                label17.Visible = true;
+                combtipoemer.Visible = true;
+                txtlatitud.Visible = true;
+                txtlongitud.Visible = true;
+                button2.Visible = true;
+                label20.Visible = true;
+                label21.Visible = true;
+                MessageBox.Show("Seleccione la Pista Emergencia");
+
+            }
+            if (combemerg.SelectedItem.Equals("NO"))
+            {
+                combpista.Text = "";
+                label11.Visible = false;
+                label12.Visible = false;
+                label13.Visible = false;
+                label14.Visible = false;
+                label15.Visible = false;
+                label16.Visible = false;
+                label17.Visible = false;
+                combtipoemer.Visible = false;
+                txtlatitud.Visible = false;
+                txtlongitud.Visible = false;
+                button2.Visible = false;
+                label20.Visible = false;
+                label21.Visible = false;
+
+            }
+
+
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

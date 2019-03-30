@@ -9,7 +9,7 @@ namespace ProyectoPrograII.Aeropuerto
     public class Aviones
     {
         //Encapsulamiento 
-        private string CodigodeAvion;
+        public string CodigodeAvion;
 
         private string TipodeAvion;
 
@@ -44,8 +44,7 @@ namespace ProyectoPrograII.Aeropuerto
         //Constructor
 
         public Aviones(string CodigodeAvion, string TipodeAvion, string ClasedeAvion, string LugarSalidaAvion, string LugarDestinoAvion,
-        string FechayHoraSalidaAvion, string FechayHoraLlegadaAvion, bool Escala, int NumerodePasajerosyTripulacion, string TipodeEmergencia, 
-        double Latitud, double Longitud, double Distancia, double TiempoEstimadoLlegada)
+        string FechayHoraSalidaAvion, string FechayHoraLlegadaAvion)
         {
             this.CodigodeAvion = CodigodeAvion;
             this.TipodeAvion = TipodeAvion;
@@ -54,13 +53,13 @@ namespace ProyectoPrograII.Aeropuerto
             this.LugarDestinoAvion = LugarDestinoAvion;
             this.FechayHoraSalidaAvion = FechayHoraSalidaAvion;
             this.FechayHoraLlegadaAvion = FechayHoraLlegadaAvion;
-            this.Escala = Escala;
-            this.NumerodePasajerosyTripulacion = NumerodePasajerosyTripulacion;
-            this.TipodeEmergencia = TipodeEmergencia;
-            this.Latitud = Latitud;
-            this.Longitud = Longitud;
-            this.Distancia = Distancia;
-            this.TiempoEstimadoLlegada = TiempoEstimadoLlegada;
+            //this.Escala = Escala;
+            //this.NumerodePasajerosyTripulacion = NumerodePasajerosyTripulacion;
+            //this.TipodeEmergencia = TipodeEmergencia;
+            //this.Latitud = Latitud;
+            //this.Longitud = Longitud;
+            //this.Distancia = Distancia;
+            //this.TiempoEstimadoLlegada = TiempoEstimadoLlegada;
 
         }
 
