@@ -44,6 +44,8 @@ namespace ProyectoPrograII
                 Convert.ToInt32( txtlongitud.Text),
                 Convert.ToDouble(label13.Text),
                 Convert.ToDouble(label11.Text)
+                 
+                
                
 
 
