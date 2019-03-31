@@ -34,17 +34,19 @@ namespace ProyectoPrograII
                 comboBox1.Text,
                 combclaseavion.Text,
                 combaccion.Text,
-                combpista.Text,
+                label24.Text,
+                textBox1.Text,
                 dateTimeaterrizaje.Text,
                 Convert.ToBoolean(combescala.Text),
-                textBox1.Text,
-                combescala.Text,
+                
                 combtipoemer.Text,
                 Convert.ToInt32( txtlatitud.Text),
                 Convert.ToInt32( txtlongitud.Text),
                 Convert.ToDouble(label13.Text),
-                Convert.ToDouble(label11.Text)
-                 
+                Convert.ToDouble(label11.Text),
+                Convert.ToDouble(label22.Text)
+                
+                
                 
                
 
@@ -60,7 +62,7 @@ namespace ProyectoPrograII
 
             borrar();
 
-            combpista.Items.Remove(combpista.SelectedItem);
+         
 
 
         }
@@ -112,10 +114,7 @@ namespace ProyectoPrograII
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //comboBox1.AddItem AvionesForms.txtcodavion.Text//
-            //FormDelCombo.Combo2.AddItem txtnombre.Text
-
-            //comboBox1.Text = AvionesForms.;
+           
             
 
         }
@@ -134,39 +133,15 @@ namespace ProyectoPrograII
                 label13.Text = (Math.Round(dis, 2)).ToString();
 
 
-                if (combclaseavion.SelectedItem.Equals("Boeing"))
+                if (combclaseavion.SelectedItem.Equals("Avion de Carga"))
                 {
-                    vel = 893;
+                    vel = 900;
                     ti = dis / vel;
 
                     label11.Text = (Math.Round(ti, 2)).ToString();
                 }
 
-                if (combclaseavion.SelectedItem.Equals("Airbus"))
-                {
-                    vel = 871;
-                    ti = dis / vel;
-
-                    label11.Text = (Math.Round(ti, 2)).ToString();
-                }
-
-                if (combclaseavion.SelectedItem.Equals("Bombardier"))
-                {
-                    vel = 876;
-                    ti = dis / vel;
-
-                    label11.Text = (Math.Round(ti, 2)).ToString();
-                }
-
-                if (combclaseavion.SelectedItem.Equals("Embraer"))
-                {
-                    vel = 875;
-                    ti = dis / vel;
-
-                    label11.Text = (Math.Round(ti, 2)).ToString();
-                }
-
-                if (combclaseavion.SelectedItem.Equals("Saab Bimotor"))
+                if (combclaseavion.SelectedItem.Equals("Avioneta VIP"))
                 {
                     vel = 476;
                     ti = dis / vel;
@@ -174,21 +149,23 @@ namespace ProyectoPrograII
                     label11.Text = (Math.Round(ti, 2)).ToString();
                 }
 
-                if (combclaseavion.SelectedItem.Equals("Piper Seneca Bimotor"))
+                if (combclaseavion.SelectedItem.Equals("Avion Pasajeros (200)"))
                 {
-                    vel = 378;
+                    vel = 900;
                     ti = dis / vel;
 
                     label11.Text = (Math.Round(ti, 2)).ToString();
                 }
 
-                if (combclaseavion.SelectedItem.Equals("King Air 300"))
+                if (combclaseavion.SelectedItem.Equals("Avion Jumbo (2,000)"))
                 {
-                    vel = 580;
+                    vel = 875;
                     ti = dis / vel;
 
                     label11.Text = (Math.Round(ti, 2)).ToString();
                 }
+
+               
             }
         }
 
@@ -196,7 +173,7 @@ namespace ProyectoPrograII
         {
             if (combemerg.SelectedItem.Equals("SI"))
             {
-                combpista.Text = "PISTA EMERGENCIA";
+                label24.Text = "PISTA EMERGENCIA";
                 label11.Visible = true;
                 label12.Visible = true;
                 label13.Visible = true;
@@ -215,7 +192,24 @@ namespace ProyectoPrograII
             }
             if (combemerg.SelectedItem.Equals("NO"))
             {
-                combpista.Text = "";
+                if (combclaseavion.SelectedItem.Equals("Avion de Carga"))
+                {
+                    label24.Text = " 1";
+                }
+                if (combclaseavion.SelectedItem.Equals("Avioneta VIP"))
+                {
+                    label24.Text = " 2";
+                }
+
+
+                if (combclaseavion.SelectedItem.Equals("Avion Pasajeros (200)"))
+                {
+                    label24.Text = " 3";
+                }
+                if (combclaseavion.SelectedItem.Equals("Avion Pasajeros (2,000)"))
+                {
+                    label24.Text = " 4";
+                }
                 label11.Visible = false;
                 label12.Visible = false;
                 label13.Visible = false;
@@ -251,48 +245,18 @@ namespace ProyectoPrograII
             {
                 double larpis, vel, ti;
 
-                //lon = Convert.ToDouble(txtlongitud.Text);
-                //lat = Convert.ToDouble(txtlatitud.Text);
+                
 
 
-                //ti = Math.Sqrt((Math.Pow(larpis, 2) + Math.Pow(vel, 2)));
-
-                //label22.Text = (Math.Round(dis, 2)).ToString();
-
-
-                if (combclaseavion.SelectedItem.Equals("Boeing"))
+                if (combclaseavion.SelectedItem.Equals("Avion de Carga"))
                 {
-                    vel = 893;
+                    vel = 900;
                     ti = 200 / vel;
 
                     label22.Text = (Math.Round(ti, 2)).ToString();
                 }
 
-                if (combclaseavion.SelectedItem.Equals("Airbus"))
-                {
-                    vel = 871;
-                    ti = 200 / vel;
-
-                    label22.Text = (Math.Round(ti, 2)).ToString();
-                }
-
-                if (combclaseavion.SelectedItem.Equals("Bombardier"))
-                {
-                    vel = 876;
-                    ti = 200 / vel;
-
-                    label22.Text = (Math.Round(ti, 2)).ToString();
-                }
-
-                if (combclaseavion.SelectedItem.Equals("Embraer"))
-                {
-                    vel = 875;
-                    ti = 200 / vel;
-
-                    label22.Text = (Math.Round(ti, 2)).ToString();
-                }
-
-                if (combclaseavion.SelectedItem.Equals("Saab Bimotor"))
+                if (combclaseavion.SelectedItem.Equals("Avioneta VIP"))
                 {
                     vel = 476;
                     ti = 200 / vel;
@@ -300,22 +264,57 @@ namespace ProyectoPrograII
                     label22.Text = (Math.Round(ti, 2)).ToString();
                 }
 
-                if (combclaseavion.SelectedItem.Equals("Piper Seneca Bimotor"))
+                if (combclaseavion.SelectedItem.Equals("Avion Pasajero (200)"))
                 {
-                    vel = 378;
+                    vel = 900;
                     ti = 200 / vel;
 
                     label22.Text = (Math.Round(ti, 2)).ToString();
                 }
 
-                if (combclaseavion.SelectedItem.Equals("King Air 300"))
+                if (combclaseavion.SelectedItem.Equals("Avion Jumbo (2,000)"))
                 {
-                    vel = 580;
+                    vel = 875;
                     ti = 200 / vel;
 
                     label22.Text = (Math.Round(ti, 2)).ToString();
                 }
+
+                
             }
+
+        }
+
+        private void combclaseavion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (combclaseavion.SelectedItem.Equals("Avion de Carga"))
+            {
+                label24.Text = " 1";
+            }
+            if (combclaseavion.SelectedItem.Equals("Avioneta VIP"))
+            {
+                label24.Text = " 2";
+            }
+
+
+            if (combclaseavion.SelectedItem.Equals("Avion Pasajeros (200)"))
+            {
+                label24.Text = " 3";
+            }
+            if (combclaseavion.SelectedItem.Equals("Avion Pasajeros (2,000)"))
+            {
+                label24.Text = " 4";
+            }
+        }
+
+        private void txtlatitud_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.combaccion = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.combpista = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimeaterrizaje = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,9 +64,10 @@
             this.combescala = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -105,26 +105,6 @@
             this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Pista/Categoria";
-            // 
-            // combpista
-            // 
-            this.combpista.FormattingEnabled = true;
-            this.combpista.Items.AddRange(new object[] {
-            "1 AVIONES DE CARGA",
-            "2 AVIONES DE CARGA",
-            "3 AVIONETAS VIP",
-            "4 AVIONETAS VIP",
-            "5 AVIONES DE PASAJEROS (200 PASAJEROS)",
-            "6 AVIONES DE PASAJEROS (200 PASAJEROS)",
-            "7 AVIONES DE PASAJEROS (200 PASAJEROS)",
-            "8 AVIONES JUMBO (2000 PASAJEROS)",
-            "9 AVIONES JUMBO (2000 PASAJEROS)",
-            "10 PISTA DE EMERGENCIA"});
-            this.combpista.Location = new System.Drawing.Point(153, 99);
-            this.combpista.Name = "combpista";
-            this.combpista.Size = new System.Drawing.Size(242, 21);
-            this.combpista.TabIndex = 3;
-            this.combpista.SelectedIndexChanged += new System.EventHandler(this.combpista_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -361,6 +341,7 @@
             this.txtlatitud.TabIndex = 41;
             this.txtlatitud.Text = "0";
             this.txtlatitud.Visible = false;
+            this.txtlatitud.TextChanged += new System.EventHandler(this.txtlatitud_TextChanged);
             // 
             // label16
             // 
@@ -406,18 +387,16 @@
             // 
             this.combclaseavion.FormattingEnabled = true;
             this.combclaseavion.Items.AddRange(new object[] {
-            "Boeing",
-            "Airbus",
-            "Bombardier",
-            "Embraer",
-            "Saab Bimotor",
-            "Piper Seneca Bimotor",
-            "King Air 300"});
+            "Avion de Carga",
+            "Avioneta VIP",
+            "Avion Pasajeros (200)",
+            "Avion Jumbo (2,000)"});
             this.combclaseavion.Location = new System.Drawing.Point(153, 45);
             this.combclaseavion.Name = "combclaseavion";
             this.combclaseavion.Size = new System.Drawing.Size(179, 21);
             this.combclaseavion.TabIndex = 54;
             this.combclaseavion.Text = "Elija Opcion";
+            this.combclaseavion.SelectedIndexChanged += new System.EventHandler(this.combclaseavion_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -493,6 +472,25 @@
             this.groupBox1.Text = "DATOS PISTA";
             this.groupBox1.Visible = false;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(175, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(65, 16);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "HORAS.";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(109, 63);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(16, 16);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "0";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(81, 115);
@@ -503,23 +501,15 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label22
+            // label24
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(109, 62);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(16, 16);
-            this.label22.TabIndex = 1;
-            this.label22.Text = "0";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(175, 62);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(65, 16);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "HORAS.";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(153, 101);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(100, 17);
+            this.label24.TabIndex = 60;
+            this.label24.Text = "NO ASIGNADO";
             // 
             // PlandeVueloForms
             // 
@@ -528,6 +518,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(859, 466);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.combemerg);
             this.Controls.Add(this.label10);
@@ -560,7 +551,6 @@
             this.Controls.Add(this.dateTimeaterrizaje);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.combpista);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.combaccion);
             this.Controls.Add(this.label1);
@@ -580,7 +570,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox combaccion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox combpista;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimeaterrizaje;
         private System.Windows.Forms.Button button1;
@@ -616,5 +605,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
     }
 }
